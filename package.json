@@ -19,5 +19,13 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrimeAcademy/betelgeuse-code-challenge-2-walkthrough.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PrimeAcademy/betelgeuse-code-challenge-2-walkthrough/issues"
+  },
+  "homepage": "https://github.com/PrimeAcademy/betelgeuse-code-challenge-2-walkthrough#readme"
 }

@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>JEN Stack Code Challenge</title>
-    <script src="vendors/jquery.min.js" charset="utf-8"></script>
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-app="JokeApp" ng-controller="JokeController as vm">
     <h1>JEN Stack Code Challenge</h1>
-    <input type='text' id='whoseJokeIn' placeholder='whose joke' />
-    <input type='text' id='questionIn' placeholder='question' />
-    <input type='text' id='punchlineIn' placeholder='punchline' />
-    <button id='addJokeButton'>Add Joke</button>
+    <input type='text' id='whoseJokeIn' placeholder='whose joke' ng-model="vm.newJoke.whoseJoke" />
+    <input type='text' id='questionIn' placeholder='question' ng-model="vm.newJoke.jokeQuestion" />
+    <input type='text' id='punchlineIn' placeholder='punchline' ng-model="vm.newJoke.punchLine" />
+    <button id='addJokeButton' ng-click="vm.postJokes()">Add Joke</button>
     <h2>Jokes:</h2>
-    <div id='outputDiv'>
+    <div class='container-fluid text-center'>
+        <div class="col-sm-offset-2 col-sm-8 text-center">
+            <div class='aJoke' ng-repeat="joke in vm.jokes">
+                <p class="name">
+                    Names: {{joke.whosejoke}}
+                </p>
+                <p>
+                    Joke: {{joke.jokequestion}}
+                </p>
+                <p>
+                    Punchline: {{joke.punchline}}
+                </p>
+            </div>
+        </div>
     </div>
-  </body>
+
+</body>
+
 </html>
